@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elena's Slideshow</title>
+        <link rel="stylesheet" href="main.css">
+        <body>
+            <h1>Lab 3, exercise 2: Slideshow</h1>
+            <h2>Top 5 Cookies</h2>
+
+            <!-- Slide Container -->
+            <div id="slide-container">
+                <div id="photo-container">
+                    <img src="p1.png" ;
+                }> 
+                </div>
+                    
+
+            </div>
+
+            <!-- Buttons -->
+            <button class="previous" onclick="prev()" > previous cookie </button>
+            <button class="next" onclick="next()"> next cookie </button>
+
+
+            
+        </body>
+    </head>
+</html>
+
+<script>
+    var slides = document.getElementById('photo-container');
+
+    var photos = ['p1','p2','p3','p4','p5'];
+
+    var index = photos.length;
+    function prev()
+    {
+        if( index > 1 && index < photos.length+1)
+        {
+            index = index - 1;
+        }
+        else if (index == 1)
+        {
+            index = 5
+        }
+        else
+        {
+            index = image.length;
+        }
+
+        slides.innerHTML = "<img src="+photos[index-1]+".png>";
+    }
+    function next()
+    {
+        if(index < photos.length)
+        {
+            index = index + 1;
+        }
+        else
+        {
+            index = 1;
+        }
+
+        slides.innerHTML = "<img src="+photos[index-1]+".png>";
+    }
+
+</script>
